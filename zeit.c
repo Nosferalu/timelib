@@ -3,6 +3,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include "zeit.h"
+
+/**
+ * @brief This function calculates the day of the year
+ * 
+ * @param day 
+ * @param month 
+ * @param year 
+ * @return int 
+ */
 int day_of_the_year(int day, int month, int year){
 
     int result = 0;
@@ -20,6 +29,13 @@ int day_of_the_year(int day, int month, int year){
             return result;
 }
 
+/**
+ * @brief This function is used for the input of day, month and year
+ * 
+ * @param day 
+ * @param month 
+ * @param year 
+ */
 void input_date(int *day, int *month, int *year){
   
    printf("Geben Sie das Jahr ein: ");
@@ -35,6 +51,12 @@ void input_date(int *day, int *month, int *year){
 
 }
 
+/**
+ * @brief This function decides of the given year is a leapyear
+ * 
+ * @param year 
+ * @return int 
+ */
 int is_leapyear(int year){
 
     if(year < 1582){
@@ -52,6 +74,14 @@ int is_leapyear(int year){
     }
 }    
 
+/**
+ * @brief This function calculates if the given year exists
+ * 
+ * @param day 
+ * @param month 
+ * @param year 
+ * @return int 
+ */
 int exists_date(int day, int month, int year){
     
             if(month > 12 || month < 1 || year < 1582 || year > 2400 || day < 1){
@@ -67,7 +97,13 @@ int exists_date(int day, int month, int year){
 
 }
 
-
+/**
+ * @brief Get the days for month object
+ * 
+ * @param month 
+ * @param year 
+ * @return int 
+ */
 int get_days_for_month(int month, int year){
     int tage_pro_monat[12] = {31,28,31,30,31,30,31,31,30,31,30,31};
 
@@ -77,6 +113,14 @@ int get_days_for_month(int month, int year){
     
     return tage_pro_monat[month];
 
+}
+
+int day_of_week(int day, int month, int year){
+    if (month < 3) {
+      month += 12;
+      year--;
+   }
+   return (((13*month+3)/5 + day + year + year/4 - year/100 + year/400) % 7);
 }
 
 

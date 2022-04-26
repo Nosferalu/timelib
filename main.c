@@ -17,6 +17,7 @@ int main() {
     int month = 0;
     int year = 0;
     int result = 0;
+    int result2 = 0;
 
      printf("*** Tag des Jahres *** \n");
 
@@ -25,8 +26,9 @@ int main() {
      }while(exists_date(day, month, year) < 1);
 
     result = day_of_the_year(day, month, year);
+    result2 = day_of_week(day, month, year);
 
-    printf("Result: %d \n", result);
+    printf("Result: %d \n", result2);
 
     return 0;
 

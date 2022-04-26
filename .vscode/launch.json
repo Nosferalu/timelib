@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
@@ -9,9 +10,9 @@
       "stopAtEntry": true,
       "cwd": "/Users/amiller/dev/schule/timelib",
       "environment": [],
-      "program": "/Users/amiller/dev/schule/timelib/build/Debug/outDebug",
+      "program": "/Users/amiller/dev/schule/timelib/build/Release/outRelease",
       "internalConsoleOptions": "openOnSessionStart",
-      "MIMode": "lldb",
+      "MIMode": "gdb",
       "externalConsole": true
     }
   ]
