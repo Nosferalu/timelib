@@ -13,22 +13,24 @@
  */
 
 int main() {
-    int day = 0;
-    int month = 0;
-    int year = 0;
     int result = 0;
     int result2 = 0;
+    struct date date;
+
+    date.year = 0;
+    date.month = 0;
+    date.day = 0;
 
      printf("*** Tag des Jahres *** \n");
 
      do{
-         input_date(&day, &month, &year);
-     }while(exists_date(day, month, year) < 1);
+         date = input_date(date);
+     }while(exists_date(date) < 1);
 
-    result = day_of_the_year(day, month, year);
-    result2 = day_of_week(day, month, year);
+    result = day_of_the_year(date);
+    result2 = day_of_week(date);
 
-    printf("Result: %d \n", result2);
+    printf("Result: %d \n", result);
 
     return 0;
 

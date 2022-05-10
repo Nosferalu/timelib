@@ -1,6 +1,22 @@
 {
   "version": "0.2.0",
   "configurations": [
+    {
+      "name": "(lldb) Anfügen",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "processId": "${command:pickProcess}",
+      "MIMode": "lldb"
+    },
+    {
+      "name": "(lldb) Anfügen",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "Programmnamen eingeben, z. B. \"${workspaceFolder}/a.out\"",
+      "processId": "${command:pickProcess}",
+      "MIMode": "lldb"
+    },
 
     {
       "name": "C/C++ Runner: Debug Session",
