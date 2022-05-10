@@ -7,9 +7,7 @@
 /**
  * @brief This function calculates the day of the year
  * 
- * @param day 
- * @param month 
- * @param year 
+ * @param struct date
  * @return int 
  */
 int day_of_the_year(struct date date){
@@ -32,9 +30,8 @@ int day_of_the_year(struct date date){
 /**
  * @brief This function is used for the input of day, month and year
  * 
- * @param day 
- * @param month 
- * @param year 
+ * @param struct date
+ * @return struct date
  */
 struct date input_date(struct date date){
   
@@ -56,7 +53,7 @@ struct date input_date(struct date date){
 /**
  * @brief This function decides of the given year is a leapyear
  * 
- * @param year 
+ * @param struct date
  * @return int 
  */
 int is_leapyear(struct date date){
@@ -79,9 +76,7 @@ int is_leapyear(struct date date){
 /**
  * @brief This function calculates if the given year exists
  * 
- * @param day 
- * @param month 
- * @param year 
+ * @param struct date
  * @return int 
  */
 int exists_date(struct date date){
@@ -102,8 +97,7 @@ int exists_date(struct date date){
 /**
  * @brief Get the days for month object
  * 
- * @param month 
- * @param year 
+ * @param struct date
  * @return int 
  */
 int get_days_for_month(struct date date){
@@ -112,7 +106,7 @@ int get_days_for_month(struct date date){
     if(is_leapyear(date) > 0){
                 tage_pro_monat[1] = 29;
             }
-    printf("%d \n", tage_pro_monat[date.month -1] );
+
     return tage_pro_monat[date.month -1];
 
 }
@@ -120,9 +114,7 @@ int get_days_for_month(struct date date){
 /**
  * @brief returns the day of the week (1 = monday, 7 = sunday)
  * 
- * @param day 
- * @param month 
- * @param year 
+ * @param struct date
  * @return int 
  */
 int day_of_week(struct date date){
