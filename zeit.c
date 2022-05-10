@@ -38,16 +38,16 @@ int day_of_the_year(struct date date){
  */
 struct date input_date(struct date date){
   
-   printf("Geben Sie das Jahr ein: ");
-            scanf("%d", &date.year);
+        printf("Geben Sie das Jahr ein: ");
+        scanf("%d", &date.year);
 
-            printf("Geben sie den Monat ein: ");
-            scanf("%d", &date.month);
+        printf("Geben sie den Monat ein: ");
+        scanf("%d", &date.month);
 
-            printf("Geben Sie den Tag ein: ");
-            scanf("%d", &date.day);
+        printf("Geben Sie den Tag ein: ");
+        scanf("%d", &date.day);
 
-            return date;
+        return date;
 
 
 
@@ -112,8 +112,8 @@ int get_days_for_month(struct date date){
     if(is_leapyear(date) > 0){
                 tage_pro_monat[1] = 29;
             }
-    
-    return tage_pro_monat[date.month];
+    printf("%d \n", tage_pro_monat[date.month -1] );
+    return tage_pro_monat[date.month -1];
 
 }
 
