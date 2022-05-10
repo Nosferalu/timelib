@@ -29,6 +29,7 @@ int main() {
 
     result = day_of_the_year(date);
     result2 = day_of_week(date);
+    
 
     printf("Result: %d \n", result);
 

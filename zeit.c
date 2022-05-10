@@ -17,10 +17,13 @@ int day_of_the_year(struct date date){
     int days_for_month = 0;
 
     days_for_month = get_days_for_month(date);
+    
 
 
-    for(i = 0; i < date.month-1; i++){
-                result = result + days_for_month;
+    for(i = 0; i < date.month; i++){
+             struct date tempDate = date;
+                tempDate.month = i;
+                result += get_days_for_month(tempDate);
             }
 
             result = result + date.day;
@@ -124,5 +127,6 @@ int day_of_week(struct date date){
    }
    return (((13*date.month+3)/5 + date.day + date.year + date.year/4 - date.year/100 + date.year/400) % 7) +1;
 }
+
 
 

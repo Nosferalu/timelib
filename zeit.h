@@ -13,6 +13,7 @@ struct date input_date(struct date);
 int exists_date(struct date); 
 int get_days_for_month(struct date); 
 int day_of_week(struct date);
+int calender_week(struct date);
 
 
 
